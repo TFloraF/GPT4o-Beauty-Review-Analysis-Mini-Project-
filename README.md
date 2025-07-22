@@ -41,7 +41,7 @@ python VISUAL.py
 
 
 Use Case
-This project was used in an academic poster presentation, with a [QR code linked to this repository]. It demonstrates how LLMs like GPT-4o can serve as discourse-aware tools in affective computing.
+This project was used in an academic poster presentation, with a [QR code linked to this repository](https://github.com/TFloraF/GPT4o-Beauty-Review-Analysis-Mini-Project-.git). It demonstrates how LLMs like GPT-4o can serve as discourse-aware tools in affective computing.
 
 
 License & Attribution
