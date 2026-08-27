@@ -1,7 +1,7 @@
 
 # Affective Discourse Analysis in Beauty Product Reviews using GPT-4o
 
-This mini-project explores how GPT-4o can classify sentiment and detect emotions in user-generated beauty product reviews. It was developed for the course **LLMs, GPT and the Humanities** at TU Darmstadt (SoSe 2025).
+This project explores how GPT-4o can classify sentiment and detect emotions in user-generated beauty product reviews. It was developed for the course **LLMs, GPT and the Humanities** at TU Darmstadt (SoSe 2025).
 
 ## Project Overview
 
