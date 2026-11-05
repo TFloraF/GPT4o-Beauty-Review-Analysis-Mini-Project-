@@ -8,7 +8,7 @@ client = OpenAI()
 
 
 
-df = pd.read_csv("senti.csv", encoding="latin1")
+df = pd.read_excel("Annotated_Reviews.xlsx")
 df = df.dropna(subset=["review text"]) 
 print(f" Total valid reviews: {len(df)}")
 
@@ -53,5 +53,5 @@ for i, review in enumerate(df["review text"]):
 
 
 df["gpt_analysis"] = results
-df.to_excel("Annotated_Reviews.xlsx", index=False)
+df.to_excel("Annotated_Reviews_Reprocessed.xlsx", index=False)
 print(" All done! Results saved to 'Annotated_Reviews.xlsx'")
