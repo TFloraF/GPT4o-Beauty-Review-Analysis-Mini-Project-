@@ -1,48 +1,70 @@
 
-# Affective Discourse Analysis in Beauty Product Reviews using GPT-4o
+# Affective Discourse Analysis in Beauty Product Reviews Using GPT-4o
 
-This project explores how GPT-4o can classify sentiment and detect emotions in user-generated beauty product reviews. It was developed for the course **LLMs, GPT and the Humanities** at TU Darmstadt (SoSe 2025).
+This academic project explores how GPT-4o classifies sentiment and identifies emotions in user-generated beauty product reviews.
+
+Developed for the course **LLMs, GPT and the Humanities** at TU Darmstadt (Summer Semester 2025).
 
 ## Project Overview
 
-- **Objective**: Understand how GPT-4o interprets affective signals in consumer reviews from the skincare and makeup domains.
-- **Methodology**: Prompt-based zero-shot classification of sentiment and emotions using GPT-4o.
-- **Dataset**: 3 beauty products — *Kiehl’s Lip Balm*, *Beauty of Joseon Sunscreen*, *Lancôme Hypnôse Mascara*.
-- **Tools**: Python scripts using `pandas`, `matplotlib`, `wordcloud` for data analysis and visualization.
+- **Objective:** Explore how GPT-4o interprets emotional expressions in consumer reviews.
+- **Methodology:** Prompt-based, zero-shot sentiment and emotion classification.
+- **Dataset:** 43 reviews covering three beauty products:
+  - Kiehl's Lip Balm
+  - Beauty of Joseon Sunscreen
+  - Lancôme Hypnôse Mascara
+- **Tools:** Python, OpenAI API, Pandas, Matplotlib, WordCloud.
 
-## Files in this Repository                           
+## Repository Files
 
-| `Annotated_Reviews.xlsx`  | Dataset + GPT-4o extracted sentiment/emotions   |
-| `gpt_sentiment_analysis4.py` | Python script for GPT-4o emotion analysis     |
-| `VISUAL.py`               | Python script to generate all three charts      |
-| `README.md`               | Project documentation (you’re reading it)       |
+| File | Description |
+|---|---|
+| `Annotated_Reviews.xlsx` | Review dataset with existing GPT-generated annotations |
+| `gpt_sentiment_analysis-4.py` | Script for GPT-based sentiment and emotion analysis |
+| `VISUAL4.py` | Script for generating visualizations |
+| `README.md` | Project documentation |
 
-## Output Visualizations
+## Visualizations
 
-- **Sentiment Pie Chart**
-- **Emotion Frequency Bar Chart**
-- **Word Cloud**
+The project includes three visualizations:
 
-All visuals use a pastel color palette optimized for academic posters.
+1. Sentiment distribution pie chart
+2. Emotion frequency bar chart
+3. Word cloud
 
 ## How to Run
 
-1. **Install dependencies**  
+### 1. Install dependencies
+
 ```bash
-pip install openai pandas matplotlib wordcloud
-Set your OpenAI API Key
-openai.api_key = "your-key-here"
-Run the analysis script
-python gpt_sentiment_analysis4.py
-Generate the visualizations
-python VISUAL.py
+python3 -m pip install openai pandas openpyxl matplotlib wordcloud
+```
 
+### 2. Generate visualizations
 
+The repository includes an annotated Excel workbook, so you can start with the visualization script:
 
+```bash
+python3 VISUAL4.py
+```
 
-Use Case
-This project was used in an academic poster presentation, with a [QR code linked to this repository](https://github.com/TFloraF/GPT4o-Beauty-Review-Analysis-Mini-Project-.git). It demonstrates how LLMs like GPT-4o can serve as discourse-aware tools in affective computing.
+### 3. Optional: Run GPT analysis again
 
+The `gpt_sentiment_analysis-4.py` script uses the OpenAI API and requires an `OPENAI_API_KEY` environment variable.
 
-License & Attribution
-Open-source, educational use only. 
+Rerunning the model generates new classifications and may incur API charges. The existing annotated workbook is sufficient for examining the original results.
+
+Never commit API keys to GitHub.
+
+## Academic Context
+
+This project was developed for an academic poster presentation at TU Darmstadt.
+
+It demonstrates an exploratory application of large language models to sentiment analysis, emotion classification, and affective discourse.
+
+## Limitations
+
+- The dataset contains only 43 reviews.
+- GPT-generated classifications may contain errors or inconsistencies.
+- Results are exploratory and should not be generalized to all consumers or beauty products.
+- Independent human annotation would be needed to evaluate classification accuracy.
