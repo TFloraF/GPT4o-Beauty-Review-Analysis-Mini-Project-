@@ -3,7 +3,7 @@ from openai import OpenAI
 import time
 
 
-client = openai.api_key = "your-key-here"
+client = OpenAI()
 
 
 
