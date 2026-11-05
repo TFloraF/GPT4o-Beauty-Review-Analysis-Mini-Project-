@@ -2,6 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from collections import Counter
+from pathlib import Path
+
+Path("figures").mkdir(exist_ok=True)
 
 
 df = pd.read_excel("Annotated_Reviews.xlsx")
@@ -41,6 +44,7 @@ plt.pie(
 )
 plt.title("Sentiment Distribution", fontsize=14)
 plt.tight_layout()
+plt.savefig("figures/sentiment_distribution.png", dpi=200, bbox_inches="tight")
 plt.show()
 
 # ================================
@@ -60,6 +64,7 @@ plt.xlabel("Emotion")
 plt.ylabel("Count")
 plt.xticks(rotation=45)
 plt.tight_layout()
+plt.savefig("figures/emotion_frequency.png", dpi=200, bbox_inches="tight")
 plt.show()
 
 # ================================
@@ -94,5 +99,6 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis('off')
 plt.title("Word Cloud of Review Texts", fontsize=16)
 plt.tight_layout()
+plt.savefig("figures/review_wordcloud.png", dpi=200, bbox_inches="tight")
 plt.show()
 
