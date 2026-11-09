@@ -75,6 +75,23 @@ This project was developed for an academic poster presentation at TU Darmstadt.
 
 It demonstrates an exploratory application of large language models to sentiment analysis, emotion classification, and affective discourse.
 
+
+## Classification Consistency Check
+
+The prompt instructed GPT-4o to select up to two emotions from eight predefined categories: joy, trust, sadness, anger, fear, surprise, disgust, and anticipation.
+
+An inspection of all 43 annotated reviews found that 13 reviews (30.2%) contained at least one emotion outside this predefined taxonomy.
+
+The additional labels were:
+- Disappointment: 11 occurrences
+- Frustration: 1 occurrence
+- Suspicion: 1 occurrence
+
+This reveals a limitation in the model's adherence to the classification instructions. The original outputs are preserved for transparency.
+
+This check evaluates taxonomy compliance, not the accuracy of the emotion classifications.
+
+
 ## Limitations
 
 - The dataset contains only 43 reviews.
